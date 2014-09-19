@@ -1,4 +1,4 @@
 Redirection
 ===========
 
-A puzzle game
+Issue tracker for Redirection - http://www.redirectiongame.com

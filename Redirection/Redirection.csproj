@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{98CA8686-FA26-49D2-A7F8-0DBB99122340}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dan200</RootNamespace>
+    <AssemblyName>Redirection</AssemblyName>
+    <StartupObject>Dan200.Game.Main.Program</StartupObject>
+    <ApplicationIcon>Icons\Icon.ico</ApplicationIcon>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>redirection.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;STEAMWORKS_LIN_OSX;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>STEAMWORKS_LIN_OSX;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SteamDebug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\SteamDebug</OutputPath>
+    <DefineConstants>DEBUG;STEAM;STEAMWORKS_LIN_OSX;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SteamRelease|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\SteamRelease</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>STEAM;STEAMWORKS_LIN_OSX;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWindows|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\ReleaseWindows</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>STEAMWORKS_WIN;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SteamReleaseWindows|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\SteamReleaseWindows</OutputPath>
+    <DefineConstants>STEAM;STEAMWORKS_WIN;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SteamDebugWindows|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\SteamDebugWindows</OutputPath>
+    <DefineConstants>DEBUG;STEAM;STEAMWORKS_WIN;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>5</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWindows|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\DebugWindows</OutputPath>
+    <DefineConstants>DEBUG;STEAMWORKS_WIN;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>5</LangVersion>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="MiniTK.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Assets\Assets.cs" />
+    <Compile Include="Core\Assets\IAssetSource.cs" />
+    <Compile Include="Core\Assets\Language.cs" />
+    <Compile Include="Core\Async\Promise.cs" />
+    <Compile Include="Core\Async\SimplePromise.cs" />
+    <Compile Include="Core\Async\Status.cs" />
+    <Compile Include="Core\Audio\ICustomAudioSource.cs" />
+    <Compile Include="Core\Computer\APIs\FSAPI.cs" />
+    <Compile Include="Core\Computer\APIs\IOAPI.cs" />
+    <Compile Include="Core\Computer\APIs\LuaAPI.cs" />
+    <Compile Include="Core\Computer\APIs\LuaFile.cs" />
+    <Compile Include="Core\Computer\APIs\OSAPI.cs" />
+    <Compile Include="Core\Computer\APIs\PackageAPI.cs" />
+    <Compile Include="Core\Computer\APIs\SystemAPI.cs" />
+    <Compile Include="Core\Computer\Computer.cs" />
+    <Compile Include="Core\Computer\DeviceCollection.cs" />
+    <Compile Include="Core\Computer\Devices\ClockDevice.cs" />
+    <Compile Include="Core\Computer\Devices\CPU\Buffer.cs" />
+    <Compile Include="Core\Computer\Devices\CPU\LuaBuffer.cs" />
+    <Compile Include="Core\Computer\Devices\DiskDriveDevice.cs" />
+    <Compile Include="Core\Computer\Devices\DiskDrive\Disk.cs" />
+    <Compile Include="Core\Computer\Devices\DiskDrive\LuaMount.cs" />
+    <Compile Include="Core\Computer\Devices\DisplayDevice.cs" />
+    <Compile Include="Core\Computer\Devices\GamepadDevice.cs" />
+    <Compile Include="Core\Computer\Devices\GPUDevice.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\ChangeListener.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\Graphics.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\Image.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\LuaImage.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\LuaPalette.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\Palette.cs" />
+    <Compile Include="Core\Computer\Devices\ROMDevice.cs" />
+    <Compile Include="Core\Computer\Devices\HardDriveDevice.cs" />
+    <Compile Include="Core\Computer\Devices\LuaCPUDevice.cs" />
+    <Compile Include="Core\Computer\EmptyMount.cs" />
+    <Compile Include="Core\Computer\Event.cs" />
+    <Compile Include="Core\Computer\EventQueue.cs" />
+    <Compile Include="Core\Computer\FileMount.cs" />
+    <Compile Include="Core\Computer\FilePath.cs" />
+    <Compile Include="Core\Computer\FileSystem.cs" />
+    <Compile Include="Core\Computer\Device.cs" />
+    <Compile Include="Core\Computer\IDevicePort.cs" />
+    <Compile Include="Core\Computer\IMount.cs" />
+    <Compile Include="Core\Computer\IWritableMount.cs" />
+    <Compile Include="Core\Computer\PortCollection.cs" />
+    <Compile Include="Core\Computer\PowerStatus.cs" />
+    <Compile Include="Core\Computer\TaskThread.cs" />
+    <Compile Include="Core\Computer\ZipMount.cs" />
+    <Compile Include="Core\GUI\Anchor.cs" />
+    <Compile Include="Core\GUI\Box.cs" />
+    <Compile Include="Core\GUI\Button.cs" />
+    <Compile Include="Core\GUI\DialogBox.cs" />
+    <Compile Include="Core\GUI\Element.cs" />
+    <Compile Include="Core\GUI\PromiseDialogBox.cs" />
+    <Compile Include="Core\GUI\Screen.cs" />
+    <Compile Include="Core\GUI\Text.cs" />
+    <Compile Include="Core\GUI\TextBox.cs" />
+    <Compile Include="Core\GUI\TextEntryDialogBox.cs" />
+    <Compile Include="Core\GUI\TextMenu.cs" />
+    <Compile Include="Core\GUI\UIColours.cs" />
+    <Compile Include="Core\Input\GamepadAxis.cs" />
+    <Compile Include="Core\Input\GamepadButton.cs" />
+    <Compile Include="Core\Input\IAxis.cs" />
+    <Compile Include="Core\Input\IButton.cs" />
+    <Compile Include="Core\Input\IGamepad.cs" />
+    <Compile Include="Core\Input\IKeyboard.cs" />
+    <Compile Include="Core\Input\IMouse.cs" />
+    <Compile Include="Core\Input\Key.cs" />
+    <Compile Include="Core\Input\MouseButton.cs" />
+    <Compile Include="Core\Input\SDL2\SDL2Gamepad.cs" />
+    <Compile Include="Core\Input\SDL2\SDL2Keyboard.cs" />
+    <Compile Include="Core\Input\SDL2\SDL2Mouse.cs" />
+    <Compile Include="Core\Input\SimpleAxis.cs" />
+    <Compile Include="Core\Input\SimpleButton.cs" />
+    <Compile Include="Core\Lua\BLONDecoder.cs" />
+    <Compile Include="Core\Lua\BLONEncoder.cs" />
+    <Compile Include="Core\Lua\BLONValueType.cs" />
+    <Compile Include="Core\Lua\LuaObjectRef.cs" />
+    <Compile Include="Core\Lua\LuaValueType.cs" />
+    <Compile Include="Core\Network\Leaderboard.cs" />
+    <Compile Include="Core\Network\WorkshopPublishResult.cs" />
+    <Compile Include="Core\Render\AmbientLight.cs" />
+    <Compile Include="Core\Render\Material.cs" />
+    <Compile Include="Core\Render\MaterialFile.cs" />
+    <Compile Include="Core\Render\OBJFile.cs" />
+    <Compile Include="Core\Render\ParticleStyle.cs" />
+    <Compile Include="Core\Render\ParticleEmitter.cs" />
+    <Compile Include="Core\Render\RenderPass.cs" />
+    <Compile Include="Core\Render\Camera.cs" />
+    <Compile Include="Core\Render\Geometry.cs" />
+    <Compile Include="Core\Render\Effect.cs" />
+    <Compile Include="Core\Render\Font.cs" />
+    <Compile Include="Core\Render\RenderStats.cs" />
+    <Compile Include="Core\Render\BackgroundEffectInstance.cs" />
+    <Compile Include="Core\Render\ParticleEffectInstance.cs" />
+    <Compile Include="Game\Arcade\ArcadeDisk.cs" />
+    <Compile Include="Game\Arcade\ArcadeRobot.cs" />
+    <Compile Include="Game\Arcade\ArcadeUtils.cs" />
+    <Compile Include="Game\Arcade\DiskSelector.cs" />
+    <Compile Include="Game\Arcade\ScoreDevice.cs" />
+    <Compile Include="Game\Arcade\RobotDevices.cs" />
+    <Compile Include="Game\Game\AxisMarker.cs" />
+    <Compile Include="Core\Render\ITexture.cs" />
+    <Compile Include="Core\Render\Model.cs" />
+    <Compile Include="Core\Render\ModelInstance.cs" />
+    <Compile Include="Core\Render\PointLight.cs" />
+    <Compile Include="Core\Render\RenderTexture.cs" />
+    <Compile Include="Core\Render\Texture.cs" />
+    <Compile Include="Game\Game\Campaign.cs" />
+    <Compile Include="Game\Game\CampaignState.cs" />
+    <Compile Include="Game\Game\CutsceneState.cs" />
+    <Compile Include="Game\Game\CutTransition.cs" />
+    <Compile Include="Game\Game\EditorState.cs" />
+    <Compile Include="Game\Game\InGameState.cs" />
+    <Compile Include="Game\Game\LevelState.cs" />
+    <Compile Include="Game\Game\ProgressUtils.cs" />
+    <Compile Include="Game\Game\StartScreenState.cs" />
+    <Compile Include="Game\Game\RobotOptionsState.cs" />
+    <Compile Include="Game\Game\OptionsState.cs" />
+    <Compile Include="Game\Game\MainMenuState.cs" />
+    <Compile Include="Game\Game\State.cs" />
+    <Compile Include="Game\Game\TestState.cs" />
+    <Compile Include="Game\Game\Transition.cs" />
+    <Compile Include="Game\GUI\ScrollingText.cs" />
+    <Compile Include="Game\GUI\LevelCompleteMessage.cs" />
+    <Compile Include="Game\GUI\Terminal.cs" />
+    <Compile Include="Game\Level\ParticleManager.cs" />
+    <Compile Include="Game\Level\TerrainTileBehaviour.cs" />
+    <Compile Include="Game\Level\Grid.cs" />
+    <Compile Include="Game\Level\Level.cs" />
+    <Compile Include="Game\Level\LevelInfo.cs" />
+    <Compile Include="Game\Level\LevelOptions.cs" />
+    <Compile Include="Game\Level\Entity.cs" />
+    <Compile Include="Game\Level\TelepadDirectory.cs" />
+    <Compile Include="Game\Level\Tile.cs" />
+    <Compile Include="Game\Level\TimeMachine.cs" />
+    <Compile Include="Game\Network\Cloud.cs" />
+    <Compile Include="Game\Robot\RobotPreSpawnAction.cs" />
+    <Compile Include="Game\User\Settings.cs" />
+    <Compile Include="Game\User\User.cs" />
+    <Compile Include="Core\Render\TextureUtil.cs" />
+    <Compile Include="Core\Window\IWindow.cs" />
+    <Compile Include="Core\Window\SDL2\SDL2Window.cs" />
+    <Compile Include="Core\Main\App.cs" />
+    <Compile Include="Core\Main\IGame.cs" />
+    <Compile Include="Core\Main\OpenGLException.cs" />
+    <Compile Include="Core\Main\SDLException.cs" />
+    <Compile Include="Core\Main\ProgramArguments.cs" />
+    <Compile Include="Core\Input\SDL2\SDL2GamepadCollection.cs" />
+    <Compile Include="Game\Game\ICameraController.cs" />
+    <Compile Include="Game\Game\InGameCameraController.cs" />
+    <Compile Include="Game\GUI\Cursor.cs" />
+    <Compile Include="Core\GUI\Image.cs" />
+    <Compile Include="Game\Game\WipeTransition.cs" />
+    <Compile Include="Core\Main\GameInfo.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Game\User\Progress.cs" />
+    <Compile Include="Game\Level\Direction.cs" />
+    <Compile Include="Game\Level\FlatDirection.cs" />
+    <Compile Include="Core\Assets\KeyValuePairs.cs" />
+    <Compile Include="Core\Assets\KeyValuePairFile.cs" />
+    <Compile Include="Core\GUI\UIFonts.cs" />
+    <Compile Include="Core\Render\Primitive.cs" />
+    <Compile Include="Game\Game\DebugCameraController.cs" />
+    <Compile Include="Game\GUI\DebugMenu.cs" />
+    <Compile Include="Game\Level\TileCoordinates.cs" />
+    <Compile Include="Game\Level\TileMap.cs" />
+    <Compile Include="Game\User\Achievement.cs" />
+    <Compile Include="Game\Level\Tiles.cs" />
+    <Compile Include="Core\Modding\Mod.cs" />
+    <Compile Include="Core\Modding\Mods.cs" />
+    <Compile Include="Game\Game\Game.cs" />
+    <Compile Include="Core\Network\ILocalUser.cs" />
+    <Compile Include="Core\Network\Steamworks\SteamworksLocalUser.cs" />
+    <Compile Include="Core\Network\Builtin\BuiltinLocalUser.cs" />
+    <Compile Include="Core\Network\INetwork.cs" />
+    <Compile Include="Core\Assets\IFileStore.cs" />
+    <Compile Include="Core\Assets\IWritableFileStore.cs" />
+    <Compile Include="Core\Assets\FolderFileStore.cs" />
+    <Compile Include="Core\Assets\EmptyFileStore.cs" />
+    <Compile Include="Core\Assets\ZipArchiveFileStore.cs" />
+    <Compile Include="Core\Assets\StreamExtensions.cs" />
+    <Compile Include="Core\Assets\ChildFileStore.cs" />
+    <Compile Include="Core\Network\Steamworks\SteamRemoteStorageFileStore.cs" />
+    <Compile Include="Core\Network\Builtin\BuiltinNetwork.cs" />
+    <Compile Include="Core\Network\Steamworks\SteamworksNetwork.cs" />
+    <Compile Include="Game\Level\TileState.cs" />
+    <Compile Include="Game\Robot\Robot.cs" />
+    <Compile Include="Game\Level\EntityState.cs" />
+    <Compile Include="Game\Robot\TurnDirection.cs" />
+    <Compile Include="Game\Robot\RobotAction.cs" />
+    <Compile Include="Game\Robot\RobotFallAction.cs" />
+    <Compile Include="Game\Robot\RobotGoalAction.cs" />
+    <Compile Include="Game\Robot\RobotWalkAction.cs" />
+    <Compile Include="Game\Robot\RobotConveyAction.cs" />
+    <Compile Include="Game\Robot\RobotTurnAction.cs" />
+    <Compile Include="Game\Robot\RobotWaitAction.cs" />
+    <Compile Include="Game\Robot\RobotActions.cs" />
+    <Compile Include="Game\Robot\RobotState.cs" />
+    <Compile Include="Core\Main\Platform.cs" />
+    <Compile Include="Core\Render\TextureAtlas.cs" />
+    <Compile Include="Core\Render\Ray.cs" />
+    <Compile Include="Core\Render\Quad.cs" />
+    <Compile Include="Game\GUI\CameraHUD.cs" />
+    <Compile Include="Game\Game\Screenshot.cs" />
+    <Compile Include="Core\Render\BitmapTexture.cs" />
+    <Compile Include="Game\Level\StateHistory.cs" />
+    <Compile Include="Core\Render\EffectInstance.cs" />
+    <Compile Include="Core\Render\ModelEffectInstance.cs" />
+    <Compile Include="Core\Render\PostEffectInstance.cs" />
+    <Compile Include="Core\Audio\IAudio.cs" />
+    <Compile Include="Core\Audio\Music.cs" />
+    <Compile Include="Core\Audio\Sound.cs" />
+    <Compile Include="Core\Audio\IPlayback.cs" />
+    <Compile Include="Core\Audio\IMusicPlayback.cs" />
+    <Compile Include="Core\Audio\ISoundPlayback.cs" />
+    <Compile Include="Game\User\Statistic.cs" />
+    <Compile Include="Game\Game\StatisticsState.cs" />
+    <Compile Include="Core\Audio\AudioEmitter.cs" />
+    <Compile Include="Core\Audio\AudioListener.cs" />
+    <Compile Include="Game\Main\Program.cs" />
+    <Compile Include="Core\Render\WorldEffectInstance.cs" />
+    <Compile Include="Core\Render\FlatEffectInstance.cs" />
+    <Compile Include="Core\Render\UpscaleEffectInstance.cs" />
+    <Compile Include="Core\Assets\AssetPath.cs" />
+    <Compile Include="Core\Util\IReadOnlyCollection.cs" />
+    <Compile Include="Core\Util\IReadOnlyList.cs" />
+    <Compile Include="Core\Util\IReadOnlyDictionary.cs" />
+    <Compile Include="Core\Render\LitEffectInstance.cs" />
+    <Compile Include="Core\Util\StringExtensions.cs" />
+    <Compile Include="Game\Level\TileList.cs" />
+    <Compile Include="Game\Level\ITileLookup.cs" />
+    <Compile Include="Game\Level\TileOutline.cs" />
+    <Compile Include="Game\Level\Telepad.cs" />
+    <Compile Include="Game\Level\TileBehaviour.cs" />
+    <Compile Include="Game\Level\TileBehaviourAttribute.cs" />
+    <Compile Include="Game\Level\TelepadTileBehaviour.cs" />
+    <Compile Include="Game\Level\ConveyorTileBehaviour.cs" />
+    <Compile Include="Game\Level\SpawnTileBehaviour.cs" />
+    <Compile Include="Game\Level\GoalTileBehaviour.cs" />
+    <Compile Include="Game\Level\LiquidTileBehaviour.cs" />
+    <Compile Include="Game\Level\FallingTile.cs" />
+    <Compile Include="Game\Level\FallingTileBehaviour.cs" />
+    <Compile Include="Game\Level\Side.cs" />
+    <Compile Include="Game\GUI\EditorTileSelect.cs" />
+    <Compile Include="Game\GUI\TileSelect.cs" />
+    <Compile Include="Core\Modding\ModStorageType.cs" />
+    <Compile Include="Core\Render\Resolution.cs" />
+    <Compile Include="Game\Options\IOption.cs" />
+    <Compile Include="Game\Options\IOptionValue.cs" />
+    <Compile Include="Game\Options\ActionOption.cs" />
+    <Compile Include="Game\Options\CycleOption.cs" />
+    <Compile Include="Game\Options\MultipleChoiceOption.cs" />
+    <Compile Include="Game\Options\ToggleOption.cs" />
+    <Compile Include="Game\Game\MainOptionsState.cs" />
+    <Compile Include="Game\Game\GraphicsOptionsState.cs" />
+    <Compile Include="Game\Game\MenuState.cs" />
+    <Compile Include="Game\Game\SoundOptionsState.cs" />
+    <Compile Include="Core\Util\Base64.cs" />
+    <Compile Include="Core\Assets\LocatedFileStore.cs" />
+    <Compile Include="Game\Game\ModEditorState.cs" />
+    <Compile Include="Game\Game\GameOverState.cs" />
+    <Compile Include="Game\Game\ThumbnailState.cs" />
+    <Compile Include="Game\Level\ExtensionTileBehaviour.cs" />
+    <Compile Include="Core\Assets\AssetLoadException.cs" />
+    <Compile Include="Game\Game\LevelSelectState.cs" />
+    <Compile Include="Game\GUI\LevelThumbnail.cs" />
+    <Compile Include="Game\Level\TileEntity.cs" />
+    <Compile Include="Game\Level\Conveyor.cs" />
+    <Compile Include="Game\Level\TilePreview.cs" />
+    <Compile Include="Game\Options\KeyBindOption.cs" />
+    <Compile Include="Core\GUI\KeyEntryDialogBox.cs" />
+    <Compile Include="Game\Level\WireTileBehaviour.cs" />
+    <Compile Include="Game\Level\ButtonTileBehaviour.cs" />
+    <Compile Include="Game\Level\Elevator.cs" />
+    <Compile Include="Game\Level\ElevatorTileBehaviour.cs" />
+    <Compile Include="Game\Level\TileLookup.cs" />
+    <Compile Include="Game\Game\GameAudio.cs" />
+    <Compile Include="Core\Input\AxisButton.cs" />
+    <Compile Include="Game\Level\CameraTargetTileBehaviour.cs" />
+    <Compile Include="Game\Level\ILevel.cs" />
+    <Compile Include="Game\Level\ITileMap.cs" />
+    <Compile Include="Game\Level\IEntityCollection.cs" />
+    <Compile Include="Game\Level\ILightCollection.cs" />
+    <Compile Include="Core\Input\GamepadType.cs" />
+    <Compile Include="Core\Input\InputMethod.cs" />
+    <Compile Include="Game\GUI\InputPrompt.cs" />
+    <Compile Include="Game\GUI\DialogueBox.cs" />
+    <Compile Include="Game\Level\HintTileBehaviour.cs" />
+    <Compile Include="Game\Script\ScriptController.cs" />
+    <Compile Include="Game\Level\HintDirectory.cs" />
+    <Compile Include="Game\GUI\InWorldInputPrompt.cs" />
+    <Compile Include="Game\Level\TurntableTileBehaviour.cs" />
+    <Compile Include="Game\Level\Turntable.cs" />
+    <Compile Include="Core\Input\Null\NullKeyboard.cs" />
+    <Compile Include="Core\Input\Null\NullButton.cs" />
+    <Compile Include="Core\Input\Null\NullMouse.cs" />
+    <Compile Include="Core\Script\LuaScript.cs" />
+    <Compile Include="Contrib\Lua\CharPtr.cs" />
+    <Compile Include="Contrib\Lua\Lua.cs" />
+    <Compile Include="Contrib\Lua\NativeMethods.cs" />
+    <Compile Include="Core\Network\IWorkshop.cs" />
+    <Compile Include="Core\Network\Steamworks\SteamworksWorkshop.cs" />
+    <Compile Include="Core\Network\WorkshopFileInfo.cs" />
+    <Compile Include="Game\Game\CampaignSelectState.cs" />
+    <Compile Include="Core\Main\SteamworksException.cs" />
+    <Compile Include="Game\Level\LevelData.cs" />
+    <Compile Include="Core\Render\ScreenEffectInstance.cs" />
+    <Compile Include="Game\Game\BlackTransition.cs" />
+    <Compile Include="Game\GUI\CampaignList.cs" />
+    <Compile Include="Game\GUI\CampaignThumbnail.cs" />
+    <Compile Include="Game\GUI\ModDownloadStatusText.cs" />
+    <Compile Include="Game\GUI\BoxWipe.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALAudio.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALSound.cs" />
+    <Compile Include="Core\Audio\Null\NullAudio.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALMusic.cs" />
+    <Compile Include="Core\Main\OpenALException.cs" />
+    <Compile Include="Contrib\NVorbis\BufferedReadStream.cs" />
+    <Compile Include="Contrib\NVorbis\DataPacket.cs" />
+    <Compile Include="Contrib\NVorbis\Huffman.cs" />
+    <Compile Include="Contrib\NVorbis\IContainerReader.cs" />
+    <Compile Include="Contrib\NVorbis\IPacketProvider.cs" />
+    <Compile Include="Contrib\NVorbis\IVorbisStreamStatus.cs" />
+    <Compile Include="Contrib\NVorbis\Mdct.cs" />
+    <Compile Include="Contrib\NVorbis\NewStreamEventArgs.cs" />
+    <Compile Include="Contrib\NVorbis\ParameterChangeEventArgs.cs" />
+    <Compile Include="Contrib\NVorbis\RingBuffer.cs" />
+    <Compile Include="Contrib\NVorbis\StreamReadBuffer.cs" />
+    <Compile Include="Contrib\NVorbis\Utils.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisCodebook.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisFloor.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisMapping.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisMode.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisReader.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisResidue.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisStreamDecoder.cs" />
+    <Compile Include="Contrib\NVorbis\VorbisTime.cs" />
+    <Compile Include="Contrib\NVorbis\Ogg\OggContainerReader.cs" />
+    <Compile Include="Contrib\NVorbis\Ogg\OggCrc.cs" />
+    <Compile Include="Contrib\NVorbis\Ogg\OggPacket.cs" />
+    <Compile Include="Contrib\NVorbis\Ogg\OggPacketReader.cs" />
+    <Compile Include="Contrib\NVorbis\Ogg\OggPageFlags.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALMusicPlayback.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALSoundSource.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALSoundPlayback.cs" />
+    <Compile Include="Game\Level\Sky.cs" />
+    <Compile Include="Game\Level\SkyInstance.cs" />
+    <Compile Include="Core\Render\AntiAliasingMode.cs" />
+    <Compile Include="Game\Level\MapEntryTileBehaviour.cs" />
+    <Compile Include="Core\Lua\LuaArgs.cs" />
+    <Compile Include="Core\Lua\LuaCoroutine.cs" />
+    <Compile Include="Core\Lua\LuaError.cs" />
+    <Compile Include="Core\Lua\LuaCFunction.cs" />
+    <Compile Include="Core\Lua\LuaMachine.cs" />
+    <Compile Include="Core\Lua\LuaMethodAttribute.cs" />
+    <Compile Include="Core\Lua\LuaObject.cs" />
+    <Compile Include="Core\Lua\LuaTable.cs" />
+    <Compile Include="Core\Lua\LuaTypeAttribute.cs" />
+    <Compile Include="Core\Lua\LuaValue.cs" />
+    <Compile Include="Game\Script\IOAPI.cs" />
+    <Compile Include="Game\Script\GameAPI.cs" />
+    <Compile Include="Game\Script\LevelAPI.cs" />
+    <Compile Include="Game\Game\Playthrough.cs" />
+    <Compile Include="Core\Assets\TextAsset.cs" />
+    <Compile Include="Game\Game\ShutdownState.cs" />
+    <Compile Include="Core\Util\MathUtil.cs" />
+    <Compile Include="Core\Util\CollectionExtensions.cs" />
+    <Compile Include="Core\Util\VectorExtensions.cs" />
+    <Compile Include="Core\Animation\LuaAnimation.cs" />
+    <Compile Include="Core\Audio\Null\NullSound.cs" />
+    <Compile Include="Core\Audio\Null\NullMusic.cs" />
+    <Compile Include="Core\Animation\IAnimation.cs" />
+    <Compile Include="Game\Level\AnimatedTileBehaviour.cs" />
+    <Compile Include="Game\Level\AnimatedTile.cs" />
+    <Compile Include="Core\Animation\AnimSet.cs" />
+    <Compile Include="Game\Robot\RobotUTurnAction.cs" />
+    <Compile Include="Game\Robot\RobotTurntableAction.cs" />
+    <Compile Include="Game\GUI\VCRRate.cs" />
+    <Compile Include="Game\Level\XRayTileBehaviour.cs" />
+    <Compile Include="Core\Render\DirectionalLight.cs" />
+    <Compile Include="Core\Render\ShadowEffectInstance.cs" />
+    <Compile Include="Core\Lua\LuaFieldAttribute.cs" />
+    <Compile Include="Core\Lua\MemoryTracker.cs" />
+    <Compile Include="Game\Script\API.cs" />
+    <Compile Include="Game\Level\EditorRobot.cs" />
+    <Compile Include="Game\Level\SpawnMarkerPreview.cs" />
+    <Compile Include="Game\Level\SpawnMarker.cs" />
+    <Compile Include="Game\Robot\RobotSpawnAction.cs" />
+    <Compile Include="Game\Robot\RobotBeamDownAction.cs" />
+    <Compile Include="Game\GUI\EntityIndicator.cs" />
+    <Compile Include="Game\Robot\RobotBeamUpAction.cs" />
+    <Compile Include="Core\Audio\SoundSet.cs" />
+    <Compile Include="Game\Robot\RobotTeleportOutAction.cs" />
+    <Compile Include="Game\Robot\RobotTeleportInAction.cs" />
+    <Compile Include="Game\Robot\RobotDrownedAction.cs" />
+    <Compile Include="Game\Robot\RobotDrownAction.cs" />
+    <Compile Include="Contrib\Steamworks.NET\CallbackDispatcher.cs" />
+    <Compile Include="Contrib\Steamworks.NET\CallbackIdentity.cs" />
+    <Compile Include="Contrib\Steamworks.NET\ISteamMatchmakingResponses.cs" />
+    <Compile Include="Contrib\Steamworks.NET\InteropHelp.cs" />
+    <Compile Include="Contrib\Steamworks.NET\Packsize.cs" />
+    <Compile Include="Contrib\Steamworks.NET\Steam.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\NativeMethods.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\SteamCallbacks.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\SteamConstants.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\SteamEnums.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\SteamStructs.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamapplist.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamapps.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamclient.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamcontroller.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamfriends.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameserver.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameserverhttp.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameserverinventory.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameservernetworking.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameserverstats.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameserverugc.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamgameserverutils.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamhtmlsurface.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamhttp.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteaminventory.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteammatchmaking.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteammusic.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteammusicremote.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamnetworking.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamremotestorage.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamscreenshots.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamugc.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamunifiedmessages.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamuser.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamuserstats.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamutils.cs" />
+    <Compile Include="Contrib\Steamworks.NET\autogen\isteamvideo.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\MatchmakingTypes\gameserveritem_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\MatchmakingTypes\servernetadr_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClient\HSteamPipe.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClient\HSteamUser.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClient\SteamAPIWarningMessageHook_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClient\SteamAPI_CheckCallbackRegistered_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClient\SteamAPI_PostAPIResultInProcess_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClientPublic\CGameID.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClientPublic\CSteamID.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamClientPublic\HAuthTicket.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamController\ControllerActionSetHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamController\ControllerAnalogActionHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamController\ControllerDigitalActionHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamController\ControllerHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamFriends\FriendsGroupID_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamHTMLSurface\HHTMLBrowser.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamHTTP\HTTPCookieContainerHandle.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamHTTP\HTTPRequestHandle.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamInventory\SteamInventoryResult_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamInventory\SteamItemDef_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamInventory\SteamItemInstanceID_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamMatchmaking\HServerListRequest.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamMatchmaking\HServerQuery.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamNetworking\SNetListenSocket_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamNetworking\SNetSocket_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamRemoteStorage\PublishedFileId_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamRemoteStorage\PublishedFileUpdateHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamRemoteStorage\UGCFileWriteStreamHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamRemoteStorage\UGCHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamScreenshots\ScreenshotHandle.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamTypes\AccountID_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamTypes\AppId_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamTypes\DepotId_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamTypes\ManifestId_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamTypes\SteamAPICall_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamUGC\UGCQueryHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamUGC\UGCUpdateHandle_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamUnifiedMessages\ClientUnifiedMessageHandle.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamUserStats\SteamLeaderboardEntries_t.cs" />
+    <Compile Include="Contrib\Steamworks.NET\types\SteamUserStats\SteamLeaderboard_t.cs" />
+    <Compile Include="Core\Input\ISteamController.cs" />
+    <Compile Include="Core\Input\Steamworks\SteamworksSteamController.cs" />
+    <Compile Include="Core\Input\Steamworks\SteamworksSteamControllerCollection.cs" />
+    <Compile Include="Game\Input\SteamControllerActionSet.cs" />
+    <Compile Include="Game\Input\SteamControllerButton.cs" />
+    <Compile Include="Game\Input\SteamControllerAxis.cs" />
+    <Compile Include="Core\Input\IJoystick.cs" />
+    <Compile Include="Core\Input\SimpleJoystick.cs" />
+    <Compile Include="Core\Input\GamepadJoystick.cs" />
+    <Compile Include="Core\Input\TwoAxisJoystick.cs" />
+    <Compile Include="Game\Input\SteamControllerJoystick.cs" />
+    <Compile Include="Game\User\Bind.cs" />
+    <Compile Include="Game\Game\InputOptionsState.cs" />
+    <Compile Include="Game\Game\KeyboardOptionsState.cs" />
+    <Compile Include="Game\Game\GamepadOptionsState.cs" />
+    <Compile Include="Game\Game\SteamControllerOptionsState.cs" />
+    <Compile Include="Core\Render\Bitmap.cs" />
+    <Compile Include="Core\Render\BlendMode.cs" />
+    <Compile Include="Game\GUI\WorldHintType.cs" />
+    <Compile Include="Game\GUI\SpawnMarkerIndicator.cs" />
+    <Compile Include="Game\GUI\RobotIndicator.cs" />
+    <Compile Include="Game\Game\AnimatedCameraController.cs" />
+    <Compile Include="Game\Script\CutsceneAPI.cs" />
+    <Compile Include="Game\Level\CutsceneEntity.cs" />
+    <Compile Include="Game\GUI\CutsceneBorder.cs" />
+    <Compile Include="Core\Network\WorkshopItemInfo.cs" />
+    <Compile Include="Core\Network\WorkshopVote.cs" />
+    <Compile Include="Game\GUI\CampaignListActionButton.cs" />
+    <Compile Include="Core\Assets\FileAssetSource.cs" />
+    <Compile Include="Core\Assets\AssetLoadTask.cs" />
+    <Compile Include="Game\Game\ReloadSourceState.cs" />
+    <Compile Include="Game\Game\LoadState.cs" />
+    <Compile Include="Core\Render\CutoutEffectInstance.cs" />
+    <Compile Include="Core\Assets\ICompoundAsset.cs" />
+    <Compile Include="Core\Assets\IBasicAsset.cs" />
+    <Compile Include="Core\Assets\IAsset.cs" />
+    <Compile Include="Game\Arcade\CheatCodeChecker.cs" />
+    <Compile Include="Game\Arcade\ArcadeState.cs" />
+    <Compile Include="Core\Assets\BinaryAsset.cs" />
+    <Compile Include="Game\Arcade\AssetMount.cs" />
+    <Compile Include="Game\Arcade\LogWriter.cs" />
+    <Compile Include="Core\Audio\ICustomPlayback.cs" />
+    <Compile Include="Core\Computer\Devices\SpeakerDevice.cs" />
+    <Compile Include="Core\Computer\Devices\Speaker\Sound.cs" />
+    <Compile Include="Core\Computer\Devices\Speaker\Speaker.cs" />
+    <Compile Include="Core\Computer\Devices\Speaker\SpeakerChannel.cs" />
+    <Compile Include="Core\Audio\OpenAL\OpenALCustomPlayback.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\TGAImage.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\LuaFont.cs" />
+    <Compile Include="Core\Computer\Devices\GPU\Font.cs" />
+    <Compile Include="Game\Analysis\AnalysisState.cs" />
+    <Compile Include="Game\Analysis\AnalysisGraph.cs" />
+    <Compile Include="Game\Analysis\CampaignAnalysis.cs" />
+    <Compile Include="Game\Analysis\LevelAnalysis.cs" />
+    <Compile Include="Game\Script\CampaignAPI.cs" />
+    <Compile Include="Core\Computer\Devices\KeyboardDevice.cs" />
+    <Compile Include="Core\Lua\LuaFunction.cs" />
+    <Compile Include="Core\Computer\APIs\LuaFunctionStream.cs" />
+    <Compile Include="Core\Lua\LuaYield.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MiniTK">
+      <HintPath>.\MiniTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="SDL2-CS">
+      <HintPath>SDL2-CS.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>Ionic.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MiniTK.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SDL2-CS.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Ionic.Zip.dll" />
+    <Content Include="SDL2-CS.dll" />
+    <None Include="Contrib\NVorbis\NVorbis.csproj" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+</Project>

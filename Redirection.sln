@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B380ED7D-CF43-49D4-99E8-9CF1EF283123}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy.sh = Deploy.sh
+		Setup.sh = Setup.sh
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redirection", "Redirection\Redirection.csproj", "{98CA8686-FA26-49D2-A7F8-0DBB99122340}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		DebugWindows|x86 = DebugWindows|x86
+		Release|x86 = Release|x86
+		ReleaseWindows|x86 = ReleaseWindows|x86
+		SteamDebug|x86 = SteamDebug|x86
+		SteamDebugWindows|x86 = SteamDebugWindows|x86
+		SteamRelease|x86 = SteamRelease|x86
+		SteamReleaseWindows|x86 = SteamReleaseWindows|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.Debug|x86.ActiveCfg = Debug|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.Debug|x86.Build.0 = Debug|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.DebugWindows|x86.ActiveCfg = DebugWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.DebugWindows|x86.Build.0 = DebugWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.Release|x86.ActiveCfg = Release|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.Release|x86.Build.0 = Release|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.ReleaseWindows|x86.ActiveCfg = ReleaseWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.ReleaseWindows|x86.Build.0 = ReleaseWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamDebug|x86.ActiveCfg = SteamDebug|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamDebug|x86.Build.0 = SteamDebug|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamDebugWindows|x86.ActiveCfg = SteamDebugWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamDebugWindows|x86.Build.0 = SteamDebugWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamRelease|x86.ActiveCfg = SteamRelease|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamRelease|x86.Build.0 = SteamRelease|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamReleaseWindows|x86.ActiveCfg = SteamReleaseWindows|x86
+		{98CA8686-FA26-49D2-A7F8-0DBB99122340}.SteamReleaseWindows|x86.Build.0 = SteamReleaseWindows|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$1.ResourceNamePolicy = FileName
+		$0.TextStylePolicy = $7
+		$7.FileWidth = 120
+		$7.TabsToSpaces = False
+		$7.inheritsSet = VisualStudio
+		$7.inheritsScope = text/plain
+	EndGlobalSection
+EndGlobal

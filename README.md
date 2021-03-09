@@ -1,6 +1,6 @@
 # Redirection
 
-Redirection is a [puzzle game](http://www.redirectiongame.com) released in 2016 by [Daniel Ratcliffe](http://www.twitter.com/DanTwohundred). This repository contains the full source code of that game as currently shipped on Steam and itch.io.
+Redirection is [a puzzle game](http://www.redirectiongame.com) released in 2016 by [Daniel Ratcliffe](http://www.twitter.com/DanTwohundred). This repository contains the full source code of that game as currently shipped on Steam and itch.io.
 
 Important Note: This source code release does not include any of the non-code assets from Redirection. These must be copied from a legally purchased copy of Redirection, which can be found on [Steam](https://store.steampowered.com/app/305760/Redirection/) or [Itch.io](https://dan200.itch.io/redirection).
 

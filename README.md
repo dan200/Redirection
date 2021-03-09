@@ -9,7 +9,7 @@ This repository is intended to represent the game exactly as released, so will n
 # How to build this code
 
 1) Clone the repository.
-2) Copy the "assets" folder from a legally purchased copy of Redirection into the "Redirection" folder of the repository
-3) Compile the Visual Studio solution provided. The "Debug" and "DebugWindows" configurations are for testing within Visual Studio, and the "Release" and "ReleaseWindows" configurations are for producing releasable builds.
-4) Copy the contents of the "Redirection/Natives" subfolder for your OS into the "Redirection/bin" subfolder for your chosen configuration.
+2) Compile the Visual Studio solution provided. The "Debug" and "DebugWindows" configurations are for testing within Visual Studio, and the "Release" and "ReleaseWindows" configurations are for producing releasable builds.
+3) Copy the contents of the "Redirection/Natives" subfolder for your OS into the "Redirection/bin" subfolder for your chosen configuration.
+4) Copy the "assets" folder from a legally purchased copy of Redirection into the "Redirection" folder of the repository
 5) Run the game and have fun!
